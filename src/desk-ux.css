@@ -66,6 +66,17 @@
   text-underline-offset: 3px;
 }
 
+.translation-result {
+  margin-top: 8px !important;
+  padding: 8px 10px;
+  border-left: 2px solid #2bd5e8;
+  border-radius: 0 7px 7px 0;
+  background: #0b1930;
+  color: #d3e6fb !important;
+  font-style: italic;
+  line-height: 1.4;
+}
+
 .modal-backdrop {
   position: fixed;
   z-index: 30;
