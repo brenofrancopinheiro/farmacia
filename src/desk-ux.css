@@ -1,0 +1,101 @@
+.unit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  border: 1px solid #38527b;
+  border-radius: 10px;
+  background: #162844;
+  color: #eaf2ff;
+  cursor: pointer;
+  padding: 10px 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: border-color .2s, background .2s, transform .2s;
+}
+
+.unit:hover,
+.unit:focus-visible {
+  border-color: #28deec;
+  background: #1a3153;
+  outline: 0;
+}
+
+.unit:active {
+  transform: translateY(1px);
+}
+
+.desk-heading {
+  margin-bottom: 28px;
+}
+
+.desk-actions {
+  margin-top: 0;
+}
+
+/* PT e ES permanecem no HTML para leitores de tela; visualmente, mostramos as bandeiras. */
+.language-switch button {
+  font-size: 0;
+  min-width: 39px;
+}
+
+.language-switch button::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 14px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.language-switch button:first-child::after { background-image: url("/flag-br.svg"); }
+.language-switch button:last-child::after { background-image: url("/flag-es.svg"); }
+
+.translate-button {
+  display: inline-flex;
+  border: 0;
+  padding: 5px 0 0;
+  background: transparent;
+  color: #5ee8ef;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  z-index: 30;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(2, 8, 20, .72);
+  backdrop-filter: blur(6px);
+}
+
+.call-modal {
+  position: relative;
+  width: min(100%, 410px);
+  padding: 28px;
+  border: 1px solid #36557f;
+  border-radius: 22px;
+  background: #10203a;
+  box-shadow: 0 25px 60px #01050dcc;
+}
+
+.call-modal h2 {
+  margin: 8px 0 10px;
+  font: 700 27px/1.05 Outfit, sans-serif;
+  letter-spacing: -.8px;
+}
+
+.call-modal > p:not(.section-label) { color: #adc0dc; line-height: 1.5; margin: 0; }
+
+.modal-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 24px; }
+.modal-actions .primary-button { min-height: 43px; font-size: 13px; }
+.modal-actions .outline-button { min-height: 43px; font-size: 13px; }
+.modal-close { position: absolute; top: 12px; right: 13px; border: 0; background: transparent; color: #9db5d8; font-size: 26px; line-height: 1; }
