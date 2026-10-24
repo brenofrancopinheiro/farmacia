@@ -1,11 +1,90 @@
-.login-screen{max-width:430px;margin:auto}.login-screen h1{font-size:47px;margin:7px 0 13px}.login-card{margin-top:24px}.login-card label{margin-bottom:20px}.login-card input{display:block}.login-card .primary-button{margin-top:25px}.login-error{color:#ff9aaa!important;margin:-6px 0 14px!important;font-size:13px!important}.desk-heading{display:flex;align-items:start;justify-content:space-between;gap:16px}.desk-heading h1{margin-bottom:0}.logout-button{margin-top:7px;border:0;background:transparent;color:#9bb5df;text-decoration:underline;text-underline-offset:4px;font-size:13px}
-.setup-warning,.app-error{margin:14px 4px 0;border-radius:12px;padding:11px 13px;font-size:13px;line-height:1.4}.setup-warning{background:#173053;border:1px solid #315281;color:#c2d6f3}.app-error{background:#3e1e32;border:1px solid #7b3a5d;color:#ffc2d8}.setup-warning code{color:#77edf1}
-.password-field{position:relative;display:block}.password-field input{padding-right:52px}.password-toggle{position:absolute;right:7px;top:12px;border:0;background:transparent;color:#79e8ef;font-size:22px;line-height:1;padding:2px 7px}
+.login-screen {
+  max-width: 430px;
+  margin: auto;
+}
+.login-screen h1 {
+  font-size: 47px;
+  margin: 7px 0 13px;
+}
+.login-card {
+  margin-top: 24px;
+}
+.login-card label {
+  margin-bottom: 20px;
+}
+.login-card input {
+  display: block;
+}
+.login-card .primary-button {
+  margin-top: 25px;
+}
+.login-error {
+  color: #ff9aaa !important;
+  margin: -6px 0 14px !important;
+  font-size: 13px !important;
+}
+.desk-heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 16px;
+}
+.desk-heading h1 {
+  margin-bottom: 0;
+}
+.logout-button {
+  margin-top: 7px;
+  border: 0;
+  background: transparent;
+  color: #9bb5df;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: 13px;
+}
+.setup-warning,
+.app-error {
+  margin: 14px 4px 0;
+  border-radius: 12px;
+  padding: 11px 13px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.setup-warning {
+  background: #173053;
+  border: 1px solid #315281;
+  color: #c2d6f3;
+}
+.app-error {
+  background: #3e1e32;
+  border: 1px solid #7b3a5d;
+  color: #ffc2d8;
+}
+.setup-warning code {
+  color: #77edf1;
+}
+.password-field {
+  position: relative;
+  display: block;
+}
+.password-field input {
+  padding-right: 52px;
+}
+.password-toggle {
+  position: absolute;
+  right: 7px;
+  top: 12px;
+  border: 0;
+  background: transparent;
+  color: #79e8ef;
+  font-size: 22px;
+  line-height: 1;
+  padding: 2px 7px;
+}
 .language-switch {
   display: inline-flex;
   align-items: center;
   overflow: hidden;
-  border: 1px solid rgba(126, 172, 255, .35);
+  border: 1px solid rgba(126, 172, 255, 0.35);
   border-radius: 999px;
 }
 
@@ -14,10 +93,10 @@
   background: transparent;
   color: #a7badb;
   font: inherit;
-  font-size: .72rem;
+  font-size: 0.72rem;
   font-weight: 800;
-  letter-spacing: .06em;
-  padding: .45rem .5rem;
+  letter-spacing: 0.06em;
+  padding: 0.45rem 0.5rem;
   cursor: pointer;
 }
 

@@ -1,0 +1,19 @@
+# Dependências
+node_modules/
+
+# Arquivos gerados pelo build
+dist/
+
+# Arquivos gerados pelo TypeScript
+coverage/
+
+# Configurações e dados locais
+.env
+.env.*
+!.env.example
+
+# Arquivos temporários do Supabase
+supabase/.temp/
+
+# Arquivos de lock das dependências
+package-lock.json

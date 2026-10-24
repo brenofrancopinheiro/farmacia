@@ -11,7 +11,10 @@
   padding: 10px 13px;
   font-weight: 700;
   letter-spacing: 1px;
-  transition: border-color .2s, background .2s, transform .2s;
+  transition:
+    border-color 0.2s,
+    background 0.2s,
+    transform 0.2s;
 }
 
 .unit:hover,
@@ -51,8 +54,12 @@
   line-height: 1;
 }
 
-.language-switch button:first-child::after { background-image: url("/flag-br.svg"); }
-.language-switch button:last-child::after { background-image: url("/flag-es.svg"); }
+.language-switch button:first-child::after {
+  background-image: url("/flag-br.svg");
+}
+.language-switch button:last-child::after {
+  background-image: url("/flag-es.svg");
+}
 
 .translate-button {
   display: inline-flex;
@@ -84,7 +91,7 @@
   display: grid;
   place-items: center;
   padding: 20px;
-  background: rgba(2, 8, 20, .72);
+  background: rgba(2, 8, 20, 0.72);
   backdrop-filter: blur(6px);
 }
 
@@ -100,13 +107,39 @@
 
 .call-modal h2 {
   margin: 8px 0 10px;
-  font: 700 27px/1.05 Outfit, sans-serif;
-  letter-spacing: -.8px;
+  font:
+    700 27px/1.05 Outfit,
+    sans-serif;
+  letter-spacing: -0.8px;
 }
 
-.call-modal > p:not(.section-label) { color: #adc0dc; line-height: 1.5; margin: 0; }
+.call-modal > p:not(.section-label) {
+  color: #adc0dc;
+  line-height: 1.5;
+  margin: 0;
+}
 
-.modal-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 24px; }
-.modal-actions .primary-button { min-height: 43px; font-size: 13px; }
-.modal-actions .outline-button { min-height: 43px; font-size: 13px; }
-.modal-close { position: absolute; top: 12px; right: 13px; border: 0; background: transparent; color: #9db5d8; font-size: 26px; line-height: 1; }
+.modal-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 24px;
+}
+.modal-actions .primary-button {
+  min-height: 43px;
+  font-size: 13px;
+}
+.modal-actions .outline-button {
+  min-height: 43px;
+  font-size: 13px;
+}
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 13px;
+  border: 0;
+  background: transparent;
+  color: #9db5d8;
+  font-size: 26px;
+  line-height: 1;
+}

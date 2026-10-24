@@ -9,3 +9,7 @@
 O banco já foi desenhado para privacidade: o cliente recebe um token único e só a função do banco retorna sua senha e posição; as tabelas não ficam abertas para leitura pública.
 
 As telas React usam essas funções. Reinicie `npm run dev` depois de preencher o arquivo `.env.local`.
+
+## Rastreamento J&T Express
+
+Antes de publicar a função `track-jt`, crie o segredo `RAPIDAPI_JT_TRACKING_KEY` no Supabase com uma chave ativa da RapidAPI. Nunca use `VITE_` para essa chave, nem a inclua no código ou no arquivo `.env.local` do frontend.

@@ -55,14 +55,31 @@ async function rpc<T>(name: string, params: Record<string, unknown> = {}) {
 export const queueApi = {
   board: () => rpc<QueueBoard[]>("public_queue_board").then((rows) => rows[0]),
   waiting: () => rpc<WaitingTicket[]>("public_waiting_list"),
-  join: (name: string, phone: string, topic: string, details: string) => rpc<Array<CustomerTicket & { token: string }>>("join_queue", { p_name: name, p_phone: phone, p_topic: topic, p_details: details }).then((rows) => rows[0]),
-  ticket: (token: string) => rpc<CustomerTicketResponse[]>("get_customer_ticket", { p_token: token }).then((rows) => {
-    const { queue_position, ...ticket } = rows[0];
-    return { ...ticket, position: queue_position };
-  }),
-  login: (username: string, password: string) => rpc<string>("staff_login", { p_username: username, p_password: password }),
-  staffBoard: (session: string) => rpc<StaffTicket[]>("staff_board", { p_session: session }),
-  callNext: (session: string) => rpc<void>("staff_call_next", { p_session: session }),
-  complete: (session: string, ticketNumber: number) => rpc<void>("staff_complete", { p_session: session, p_ticket_number: ticketNumber }),
-  togglePause: (session: string) => rpc<boolean>("staff_toggle_pause", { p_session: session }),
+  join: (name: string, phone: string, topic: string, details: string) =>
+    rpc<Array<CustomerTicket & { token: string }>>("join_queue", {
+      p_name: name,
+      p_phone: phone,
+      p_topic: topic,
+      p_details: details,
+    }).then((rows) => rows[0]),
+  ticket: (token: string) =>
+    rpc<CustomerTicketResponse[]>("get_customer_ticket", {
+      p_token: token,
+    }).then((rows) => {
+      const { queue_position, ...ticket } = rows[0];
+      return { ...ticket, position: queue_position };
+    }),
+  login: (username: string, password: string) =>
+    rpc<string>("staff_login", { p_username: username, p_password: password }),
+  staffBoard: (session: string) =>
+    rpc<StaffTicket[]>("staff_board", { p_session: session }),
+  callNext: (session: string) =>
+    rpc<void>("staff_call_next", { p_session: session }),
+  complete: (session: string, ticketNumber: number) =>
+    rpc<void>("staff_complete", {
+      p_session: session,
+      p_ticket_number: ticketNumber,
+    }),
+  togglePause: (session: string) =>
+    rpc<boolean>("staff_toggle_pause", { p_session: session }),
 };
